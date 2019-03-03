@@ -3,7 +3,7 @@
 # Arch Linux: update + reboot if needed
 # First version: 2019-03-02
 # WARNING: quick and dirtyffective... Usually NOT RECOMMENDED
-# Woks for me: I'd rather have an unbootable VPS than a not updated one
+# Woks for me: I'd rather have an unbootable VPS than an outdated one
 
 
 DEBUG=
