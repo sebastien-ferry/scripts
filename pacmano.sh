@@ -30,9 +30,9 @@ $DEBUG date +"%Y%m%d %H%M%S" 2>&1 | tee -a $log_file $log_date
 
 kernel_boot=$(file /boot/$kernel_name| awk '{print $9}')
 kernel_uname=$(uname -r)
-$DEBUG echo boot:$kernel_boot uname:$kernel_uname
+$DEBUG echo boot:$kernel_boot uname:$kernel_uname 2>&1 | tee -a $log_file $log_date
 
 if [ "$boot_kernel" != "$uname_kernel" ]
 then
-	$DEBUG echo REBOOT 2>&1 | tee -a $log_file $log_date
+	$DEBUG shutdown -r now 2>&1 | tee -a $log_file $log_date
 fi
